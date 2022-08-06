@@ -22,6 +22,7 @@ def Success(request):
     # details = Generate.objects.filter(id=id)
     recentpost = Generate.objects.all().order_by('-id')[:1]
     # succ = Generate.objec
+    
     content = {
         # 'succ': succ,
         'recentpost':recentpost,

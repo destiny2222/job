@@ -52,7 +52,7 @@
                 <div class=" py-5 px-3" style="display:inline-block;">
                     <div class="card-body">
                         <div class="icon-2 mb-3">
-                            <span>{{ i.fullname|truncatechars:2 }}</span>
+                            <span>{{ i.fullname|truncatechars_html:2 }}</span>
                         </div>
                         <h4>{{ i.fullname }}</h4>
                         <h3 class="pt-3">payment to $carbon0345</h3>
