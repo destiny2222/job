@@ -1476,15 +1476,19 @@ select{
   transition: 0.4s;
 }
 .pen{
-  padding: 12px 20rem;
+  padding: 12px 10rem;
   color: rgb(26, 223, 26) !important;
   transition: 0.4s;
   border-radius: 25px;
 }
 
+
+
 .pen:hover{
    color: white !important;
 }
+
+
 
 
 .icon-2{
@@ -1492,12 +1496,14 @@ select{
   border-radius:50px;
   height: 16%;
   padding: 0.4em 0.6em;
-  width:7%;
+  width:14%;
   background-color: #ff0000;
   color: #fff;
   font-size:1.5rem;
   align-items: center;
 }
+
+
 
 .contact  button[type=submit]:hover {
   background: var(--color-primary);

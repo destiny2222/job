@@ -15,7 +15,7 @@ def Geneview(request):
         else:
             messages.info(request, form.errors) 
             return redirect('/')
-    return render(request, 'contact.html')
+    return render(request, 'contact.html', {'form': form})
 
 
 def Success(request):
@@ -25,8 +25,8 @@ def Success(request):
     
     content = {
         # 'succ': succ,
-        'recentpost':recentpost,
-        'succ':recentpost
+        # 'recentpost':recentpost,
+        'recentpost':recentpost
     }
     return render(request, 'page.html', content)    
 

@@ -13,9 +13,9 @@ class Generate(models.Model):
 
     fullname = models.CharField(max_length=225)
     payment_method = models.CharField(max_length=225, choices=choice_nethod)
-    amount = models.CharField(max_length=225)
+    amount = models.DecimalField(max_digits=225, decimal_places=2)
     hashtag = models.CharField(max_length=225)
-    sent_date = models.TimeField(auto_now_add=True, null=True, blank=True)
+    sent_date = models.TimeField(auto_now_add=now, null=True, blank=True)
 
     def __str__(self):
         return self.fullname
