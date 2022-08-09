@@ -6,8 +6,11 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.Geneview, name="generate"),
+    path('', views.HomeView, name="home"),
+    path('cashapp', views.Geneview, name="generate"),
+    path('reciept', views.paymentview, name="payment"),
     path('success', views.Success, name="suc"),
+    path('summary', views.pay, name="sum"),
     path('payment-sent', views.Lastview, name="sent"),
 ]
 

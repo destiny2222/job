@@ -1482,6 +1482,11 @@ select{
   border-radius: 25px;
 }
 
+.pen-1{
+  padding: 12px 10rem;
+  transition: 0.4s;
+  border-radius: 10px;
+}
 
 
 .pen:hover{
@@ -1494,16 +1499,26 @@ select{
 .icon-2{
   display: inline-block;
   border-radius:50px;
-  height: 16%;
-  padding: 0.4em 0.6em;
-  width:14%;
+  height: 13%;
+  padding: 0.1em 0.2em;
+  width:12%;
   background-color: #ff0000;
   color: #fff;
   font-size:1.5rem;
   align-items: center;
 }
 
-
+.icon3{
+  display: inline-block;
+  border-radius:50px;
+  height:0%;
+  padding: 0.1em 0.2em;
+  width:18%;
+  background-color: #ccc;
+  color: rgb(26, 223, 26);
+  font-size:1.5rem;
+  align-items: center;
+}
 
 .contact  button[type=submit]:hover {
   background: var(--color-primary);

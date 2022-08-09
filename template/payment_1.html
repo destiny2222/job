@@ -39,19 +39,19 @@
     }
     .amount{
       font-size: 33px;
-      font-weight: 700;
+      font-weight: 500;
     }
 
- .full{
+    .full{
       font-size: 1.8rem;
       font-weight: 700;
     }
 
     @media (max-width:768px) {
-      .btn-outline-secondary{
+      .btn-primary{
         padding:12px 6rem;
       }
-
+    
       .icon-2{
         width: 22%;
       }
@@ -62,42 +62,42 @@
       font-size:13px;
     }
     }
-  </style>
+  </style> 
 
 </head>
 
 <body class="page-contact">
 
-
+ 
 
   <main id="main">
 
-
+   
 
     <!-- ======= Contact Section ======= carbon0345 -->
     <section id="contact" class="">
       <div class="container position-relative" data-aos="fade-up">
 
         <div class="row gy-3 d-flex justify-content-center">
-            {%  for i in recent %}
+            {%  for i in recenting %}
             <div class="col-lg-12 col-12 text-center" data-aos="fade-up" data-aos-delay="250">
-
+                <div class="d-flex justify-content-evenly">
+                  <span><i class="bi bi-arrow-left"></i></span>
+                  <p style="text-transform: uppercase;">Payment Processed</p>
+                  <span><i class="bi bi-x-lg"></i></span>
+                </div>
                 <div class=" py-3 px-3" style="display:inline-block;">
                     <div class="card-body">
-                        <div class="icon-2 mb-3">
-                            <span class="full">{{ i.fullname|first }}</span>
+                        <p style="font-weight:900;font-size:20px;">Sent ${{ i.price }}</p>
+                        <div class="icon3 mt-3 mb-3">
+                            <span class="full"><i class="bi bi-check"></i></span>
                         </div>
-                        <h5 style="font-weight: 900;">{{ i.fullname }}</h5>
-                        <h3  class="text-muted pt-2 head-p">payment to {{ i.hashtag }}</h3>
-
-
+                        <h5 style="font-weight: 900;">to {{ i.name }}</h5>
+                        <h3  class="text-muted pt-2 head-p">{{ i.number }}</h3>
+                         <p class="pt-5" style="font-size:13px;">The money will be availiable in {{ i.name }} account shortly</p>
                         <div class="" style="margin-top: 6rem;">
-                            <h1 class="text-muted amount">${{ i.amount }}</h1>
-                            <p class="text-muted time-z">Today at {{  i.sent_date }}</p>
-                        </div>
-                        <div class="" style="margin-top: 6rem;">
-                            <!--<p>page under review  </p>-->
-                          <button href="javascript:void()" class="btn btn-outline-secondary pen">Pending</button>
+                          <p>comfirmation: PNC{{ list_for_random | random }}</p>
+                          <button href="javascript:void()" class="btn btn-primary pen-1 text-white">Pending</button>
                         </div>
                     </div>
                 </div>
@@ -111,9 +111,9 @@
 
   </main><!-- End #main -->
 
+ 
 
-
-
+  
 
   <div id="preloader"></div>
 

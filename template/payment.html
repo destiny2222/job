@@ -30,80 +30,60 @@
   <!-- Template Main CSS File -->
   <link href="/static/assets/css/main.css" rel="stylesheet">
 
-   <style>
-    .head-p{
-      font-size:20px;
-    }
-    .time-z{
-      font-size:16px;
-    }
-    .amount{
-      font-size: 33px;
-      font-weight: 700;
-    }
-
- .full{
-      font-size: 1.8rem;
-      font-weight: 700;
-    }
-
-    @media (max-width:768px) {
-      .btn-outline-secondary{
-        padding:12px 6rem;
-      }
-
-      .icon-2{
-        width: 22%;
-      }
-      .head-p{
-        font-size: 18px;
-      }
-      .time-z{
-      font-size:13px;
-    }
-    }
-  </style>
 
 </head>
 
 <body class="page-contact">
 
-
+ 
 
   <main id="main">
 
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('/static/assets/img/contact-header.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center">
 
+        <h2>Reciept</h2>
+        <!-- <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Contact</li>
+        </ol> -->
 
-    <!-- ======= Contact Section ======= carbon0345 -->
-    <section id="contact" class="">
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
       <div class="container position-relative" data-aos="fade-up">
 
-        <div class="row gy-3 d-flex justify-content-center">
-            {%  for i in recent %}
-            <div class="col-lg-12 col-12 text-center" data-aos="fade-up" data-aos-delay="250">
+        <div class="row gy-4 d-flex justify-content-end">
 
-                <div class=" py-3 px-3" style="display:inline-block;">
-                    <div class="card-body">
-                        <div class="icon-2 mb-3">
-                            <span class="full">{{ i.fullname|first }}</span>
-                        </div>
-                        <h5 style="font-weight: 900;">{{ i.fullname }}</h5>
-                        <h3  class="text-muted pt-2 head-p">payment to {{ i.hashtag }}</h3>
+        
+          <div class="col-lg-12 col-12" data-aos="fade-up" data-aos-delay="250">
 
-
-                        <div class="" style="margin-top: 6rem;">
-                            <h1 class="text-muted amount">${{ i.amount }}</h1>
-                            <p class="text-muted time-z">Today at {{  i.sent_date }}</p>
-                        </div>
-                        <div class="" style="margin-top: 6rem;">
-                            <!--<p>page under review  </p>-->
-                          <button href="javascript:void()" class="btn btn-outline-secondary pen">Pending</button>
-                        </div>
-                    </div>
+            <form action="" method="post"  class="">
+              {% csrf_token %}
+              {{  form.error }}
+              <div class="row">
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="name" id="subject" placeholder="Enter full Name" required>
                 </div>
+                <div class="col-md-8 form-group">
+                  <input type="text" name="price" class="form-control" id="name" placeholder="Enter Amount" required>
+                </div>
+                <div class="col-md-8 form-group">
+                  <input type="text" name="number" class="form-control" id="name" placeholder="Phone Number" required>
+                </div>
+                
+              </div>
+            
+              <div class="text-center mt-3">
+                <button type="submit">Generate</button>
+              </div>
+            </form>
 
-            </div>
-          {%  endfor  %}
+          </div><!-- End Contact Form -->
+
         </div>
 
       </div>
@@ -111,9 +91,9 @@
 
   </main><!-- End #main -->
 
+ 
 
-
-
+  
 
   <div id="preloader"></div>
 
